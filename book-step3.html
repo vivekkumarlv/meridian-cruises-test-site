@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Passenger Info — Book Alaska Cruise | Meridian Cruises Fictional Test Site</title>
+  <link rel="stylesheet" href="_shared/styles.css">
+  <!-- Adobe Launch — _satellite not present in test env -->
+  <script src="_shared/launch-stub.js"></script>
+  <script src="_shared/am-config.js"></script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <div class="nav-logo-mark">H</div>
+        <span class="nav-logo-text">Meridian <span>America</span></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="destination.html">Destinations</a></li>
+        <li><a href="cruises.html">Cruises</a></li>
+        <li><a href="shore-excursions.html">Shore Excursions</a></li>
+        <li><a href="account.html">Account</a></li>
+        <li><a href="cruises.html" class="nav-cta">Find a Cruise</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Funnel Step Indicator -->
+  <div class="funnel-steps">
+    <div class="funnel-steps-inner">
+      <div class="funnel-step done">
+        <div class="funnel-step-bubble">✓</div>
+        <span class="funnel-step-label">Select Dates</span>
+      </div>
+      <div class="funnel-connector done"></div>
+      <div class="funnel-step done">
+        <div class="funnel-step-bubble">✓</div>
+        <span class="funnel-step-label">Choose Cabin</span>
+      </div>
+      <div class="funnel-connector done"></div>
+      <div class="funnel-step active">
+        <div class="funnel-step-bubble">3</div>
+        <span class="funnel-step-label">Passenger Info</span>
+      </div>
+      <div class="funnel-connector"></div>
+      <div class="funnel-step">
+        <div class="funnel-step-bubble">4</div>
+        <span class="funnel-step-label">Review &amp; Pay</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a><span>›</span>
+        <a href="cruises.html">Cruises</a><span>›</span>
+        <a href="cruise-detail.html">Alaska 7-Night</a><span>›</span>
+        Passenger Info
+      </div>
+      <h1>Step 3: Passenger Information</h1>
+      <p>May 14, 2027 · ms Meridian Aurora · Verandah Cabin</p>
+    </div>
+  </div>
+
+  <main>
+    <section class="section section-sand">
+      <div class="container">
+        <div class="booking-layout">
+
+          <!-- Passenger Form -->
+          <div>
+            <!-- Guest 1 -->
+            <div class="booking-form-card" style="margin-bottom:20px;">
+              <h3 style="font-family:'Playfair Display',serif;font-size:1.1rem;color:#002B5C;margin-bottom:20px;">Guest 1 (Lead Passenger)</h3>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label">Title</label>
+                  <select class="form-select" id="guest1-title">
+                    <option>Mr.</option>
+                    <option>Mrs.</option>
+                    <option>Ms.</option>
+                    <option>Dr.</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Date of Birth</label>
+                  <input type="date" class="form-control" id="guest1-dob" value="1975-08-15">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label">First Name</label>
+                  <input type="text" class="form-control" id="guest1-first" value="James" placeholder="First name as on passport">
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Last Name</label>
+                  <input type="text" class="form-control" id="guest1-last" value="Henderson" placeholder="Last name as on passport">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label">Email Address</label>
+                  <input type="email" class="form-control" id="guest1-email" value="j.henderson@example.com" placeholder="we'll send booking confirmation here">
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Phone Number</label>
+                  <input type="tel" class="form-control" id="guest1-phone" value="+1 206 555 0187" placeholder="+1 xxx xxx xxxx">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Voyager Club Number (optional)</label>
+                <input type="text" class="form-control" id="guest1-voyager" value="VOYAGER-839201" placeholder="Enter your Voyager Club number for benefits">
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label">Passport Number</label>
+                  <input type="text" class="form-control" id="guest1-passport" value="US123456789" placeholder="Passport number">
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Passport Expiry</label>
+                  <input type="date" class="form-control" id="guest1-passport-exp" value="2031-03-20">
+                </div>
+              </div>
+            </div>
+
+            <!-- Guest 2 -->
+            <div class="booking-form-card" style="margin-bottom:20px;">
+              <h3 style="font-family:'Playfair Display',serif;font-size:1.1rem;color:#002B5C;margin-bottom:20px;">Guest 2</h3>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label">Title</label>
+                  <select class="form-select">
+                    <option>Mr.</option>
+                    <option selected>Mrs.</option>
+                    <option>Ms.</option>
+                    <option>Dr.</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Date of Birth</label>
+                  <input type="date" class="form-control" value="1978-04-22">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label">First Name</label>
+                  <input type="text" class="form-control" value="Sarah" placeholder="First name as on passport">
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Last Name</label>
+                  <input type="text" class="form-control" value="Henderson" placeholder="Last name as on passport">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label">Passport Number</label>
+                  <input type="text" class="form-control" value="US987654321">
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Passport Expiry</label>
+                  <input type="date" class="form-control" value="2030-11-08">
+                </div>
+              </div>
+            </div>
+
+            <!-- Special Requests -->
+            <div class="booking-form-card" style="margin-bottom:20px;">
+              <h3 style="font-family:'Playfair Display',serif;font-size:1.1rem;color:#002B5C;margin-bottom:16px;">Special Requests</h3>
+              <div class="form-group">
+                <label class="form-label">Dietary Requirements</label>
+                <select class="form-select">
+                  <option>No special requirements</option>
+                  <option>Vegetarian</option>
+                  <option>Vegan</option>
+                  <option>Gluten-free</option>
+                  <option>Halal</option>
+                  <option>Kosher</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Accessibility Needs</label>
+                <textarea class="form-control" rows="3" placeholder="Please describe any accessibility requirements or medical needs..."></textarea>
+              </div>
+            </div>
+
+            <div style="display:flex;justify-content:space-between;align-items:center;">
+              <a href="book-step2.html" class="btn btn-outline">← Back</a>
+              <a href="book-step4.html" class="btn btn-primary" id="continue-btn">Continue to Review &amp; Pay →</a>
+            </div>
+          </div>
+
+          <!-- Summary Sidebar -->
+          <div>
+            <div class="booking-summary-card">
+              <p class="booking-summary-title">Your Booking</p>
+              <div class="booking-summary-row"><span>Voyage</span><span>MC-AK001</span></div>
+              <div class="booking-summary-row"><span>Departure</span><span>May 14, 2027</span></div>
+              <div class="booking-summary-row"><span>Duration</span><span>7 Nights</span></div>
+              <div class="booking-summary-row"><span>Ship</span><span>ms Meridian Aurora</span></div>
+              <div class="booking-summary-row"><span>Cabin</span><span>Verandah</span></div>
+              <div class="booking-summary-row"><span>Guests</span><span>2</span></div>
+              <div class="booking-summary-row total">
+                <span>Subtotal</span>
+                <span>$7,996</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <span>© 2027 Meridian Cruises (fictional test site)</span>
+        <span>Privacy Policy · Cookie Settings</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // intentional: trackBookingStep fires for step 3 — eVar22 = "3"
+      if (typeof trackBookingStep === 'function') {
+        trackBookingStep(3, 'Passenger Info');
+      }
+    });
+  </script>
+
+</body>
+</html>

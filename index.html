@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meridian Cruises — Explore the World | Fictional Test Site</title>
+  <link rel="stylesheet" href="_shared/styles.css">
+  <!-- Adobe Launch — _satellite not present in test env -->
+  <script src="_shared/launch-stub.js"></script>
+  <script src="_shared/am-config.js"></script>
+  <!-- MODULE 5: A4T — at.js stub script tag (scanner detects by src attribute) -->
+  <script src="at.js" data-at-js-stub="true"></script>
+  <!-- MODULE 8: AAM DIL library (scanner detects by src) -->
+  <script src="dil.js"></script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <div class="nav-logo-mark">H</div>
+        <span class="nav-logo-text">Meridian <span>America</span></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="destination.html">Destinations</a></li>
+        <li><a href="cruises.html">Cruises</a></li>
+        <li><a href="shore-excursions.html">Shore Excursions</a></li>
+        <li><a href="account.html">Account</a></li>
+        <li><a href="cruises.html" class="nav-cta">Find a Cruise</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-content">
+        <p class="hero-eyebrow">Over 150 Years of Seafaring Excellence</p>
+        <h1>Explore the World with Meridian Cruises</h1>
+        <p>Sail to over 400 destinations across all seven continents. Immersive itineraries, world-class cuisine, and legendary service await.</p>
+        <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+          <a href="cruises.html" class="btn btn-primary">Find Your Cruise</a>
+          <a href="destination.html" class="btn btn-secondary">Explore Destinations</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Cruises -->
+    <section class="section section-sand">
+      <div class="container">
+        <div class="section-header">
+          <h2>Featured Voyages</h2>
+          <div class="section-divider"></div>
+          <p>Handpicked itineraries for every style of traveller — from the glaciers of Alaska to the sun-drenched Greek Isles.</p>
+        </div>
+
+        <div class="cards-grid">
+          <!-- Alaska Card -->
+          <div class="cruise-card">
+            <div class="cruise-card-img-placeholder">Alaska</div>
+            <div class="cruise-card-body">
+              <span class="cruise-card-tag">Alaska</span>
+              <h3 class="cruise-card-title">Alaska 7-Night Inside Passage</h3>
+              <p class="cruise-card-meta">Seattle → Juneau → Skagway → Glacier Bay → Ketchikan → Seattle</p>
+              <div class="cruise-card-price">
+                <span class="price-from">From</span>
+                <span class="cabin-price" id="featured-alaska-price">$2,798</span>
+                <span class="price-from">per person</span>
+              </div>
+              <a href="cruise-detail.html" class="btn btn-outline btn-sm" onclick="window.trackCTA && trackCTA('View Alaska Cruise', 'cruise-detail.html')">View Voyage</a>
+            </div>
+          </div>
+
+          <!-- Caribbean Card -->
+          <div class="cruise-card">
+            <div class="cruise-card-img-placeholder">Caribbean</div>
+            <div class="cruise-card-body">
+              <span class="cruise-card-tag">Caribbean</span>
+              <h3 class="cruise-card-title">Eastern Caribbean 10-Night</h3>
+              <p class="cruise-card-meta">Fort Lauderdale → St. Maarten → St. Thomas → Grand Turk → Nassau → Fort Lauderdale</p>
+              <div class="cruise-card-price">
+                <span class="price-from">From</span>
+                <span class="cabin-price">$1,999</span>
+                <span class="price-from">per person</span>
+              </div>
+              <a href="cruises.html" class="btn btn-outline btn-sm" onclick="window.trackCTA && trackCTA('View Caribbean Cruise', 'cruises.html')">View Voyage</a>
+            </div>
+          </div>
+
+          <!-- Europe Card -->
+          <div class="cruise-card">
+            <div class="cruise-card-img-placeholder">Europe</div>
+            <div class="cruise-card-body">
+              <span class="cruise-card-tag">Europe</span>
+              <h3 class="cruise-card-title">Mediterranean Splendours 14-Night</h3>
+              <p class="cruise-card-meta">Barcelona → Monte Carlo → Rome → Athens → Santorini → Venice → Barcelona</p>
+              <div class="cruise-card-price">
+                <span class="price-from">From</span>
+                <span class="cabin-price">$3,299</span>
+                <span class="price-from">per person</span>
+              </div>
+              <a href="cruises.html" class="btn btn-outline btn-sm" onclick="window.trackCTA && trackCTA('View Europe Cruise', 'cruises.html')">View Voyage</a>
+            </div>
+          </div>
+        </div>
+
+        <div style="text-align:center;margin-top:36px;">
+          <a href="cruises.html" class="btn btn-primary">View All Voyages</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Meridian -->
+    <section class="section section-light">
+      <div class="container">
+        <div class="section-header">
+          <h2>The Meridian Difference</h2>
+          <div class="section-divider"></div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:32px;text-align:center;">
+          <div>
+            <div style="font-size:2.5rem;margin-bottom:12px;">⚓</div>
+            <h4 style="color:#002B5C;margin-bottom:8px;">150+ Years at Sea</h4>
+            <p class="text-muted text-sm">Founded in 1873, we've been crafting extraordinary voyages for generations of explorers.</p>
+          </div>
+          <div>
+            <div style="font-size:2.5rem;margin-bottom:12px;">🌍</div>
+            <h4 style="color:#002B5C;margin-bottom:8px;">400+ Destinations</h4>
+            <p class="text-muted text-sm">From the Amazon to the Arctic, our fleet visits the world's most remarkable places.</p>
+          </div>
+          <div>
+            <div style="font-size:2.5rem;margin-bottom:12px;">🍽️</div>
+            <h4 style="color:#002B5C;margin-bottom:8px;">Culinary Excellence</h4>
+            <p class="text-muted text-sm">Fresh, sustainably sourced ingredients — every meal prepared by award-winning chefs.</p>
+          </div>
+          <div>
+            <div style="font-size:2.5rem;margin-bottom:12px;">⭐</div>
+            <h4 style="color:#002B5C;margin-bottom:8px;">Voyager Club</h4>
+            <p class="text-muted text-sm">Our loyalty programme rewards every voyage with exclusive benefits and upgrades.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Destinations Banner -->
+    <section class="section section-navy">
+      <div class="container" style="text-align:center;">
+        <div class="section-header">
+          <h2>Discover Your Next Port of Call</h2>
+          <div class="section-divider"></div>
+          <p>Explore shore excursions, port guides, and expert travel tips for every destination.</p>
+        </div>
+        <a href="destination.html" class="btn btn-primary">Explore Destinations</a>
+      </div>
+    </section>
+
+    <!-- Module Testing Links (for QA and demo purposes) -->
+    <section id="module-testing" style="border-top: 2px dashed #ccc; margin-top: 40px; padding: 32px 20px; background: #f9f9f9;">
+      <div class="container">
+        <h3 style="color:#002B5C;margin-bottom:12px;">Migration Module Test Pages</h3>
+        <ul style="line-height:2;padding-left:20px;">
+          <li><a href="video.html">Module 6 — Media Analytics / Heartbeat Demo</a></li>
+          <li><a href="cname-demo.html">Module 9 — CNAME Custom Edge Domain Demo</a></li>
+        </ul>
+        <p style="font-size: 0.85em; color: #666; margin-top: 8px;">These pages exercise specific industry-gap detection scenarios in LV Tag Pilot.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="nav-logo">
+            <div class="nav-logo-mark">H</div>
+            <span class="nav-logo-text">Meridian <span>America</span></span>
+          </div>
+          <p>Delivering extraordinary cruise experiences since 1873. A proud member of Carnival Corporation.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="cruises.html">Find a Cruise</a></li>
+            <li><a href="destination.html">Destinations</a></li>
+            <li><a href="shore-excursions.html">Shore Excursions</a></li>
+            <li><a href="cruise-detail.html">Alaska Cruises</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Plan</h4>
+          <ul>
+            <li><a href="book-step1.html">Start Booking</a></li>
+            <li><a href="account.html">Voyager Club</a></li>
+            <li><a href="#">Travel Insurance</a></li>
+            <li><a href="#">Onboard Packages</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About Meridian</a></li>
+            <li><a href="#">Sustainability</a></li>
+            <li><a href="#">Press</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2027 Meridian Cruises (fictional test site)</span>
+        <span>Privacy Policy · Cookie Settings · Terms of Use</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- OneTrust consent banner stub -->
+  <!-- intentional: OneTrust banner present — tests CMP auto-detection in scanner -->
+  <div id="onetrust-banner-sdk">
+    <p>We use cookies to improve your experience, analyse site traffic, and personalise content. By clicking "Accept All Cookies" you agree to the use of cookies as described in our <a href="#">Cookie Policy</a>.</p>
+    <div class="cookie-btns">
+      <button id="onetrust-reject-all-handler">Manage Preferences</button>
+      <button id="onetrust-accept-btn-handler">Accept All Cookies</button>
+    </div>
+  </div>
+
+  <script>
+    // Hide consent banner on accept/reject
+    document.getElementById('onetrust-accept-btn-handler').addEventListener('click', function() {
+      document.getElementById('onetrust-banner-sdk').style.display = 'none';
+    });
+    document.getElementById('onetrust-reject-all-handler').addEventListener('click', function() {
+      document.getElementById('onetrust-banner-sdk').style.display = 'none';
+    });
+
+    // Page tracking
+    document.addEventListener('DOMContentLoaded', function() {
+      // intentional: prop3 set as site section, then s.t() fires page view beacon
+      if (typeof _mcs !== 'undefined') {
+        _mcs.prop3 = "Home";
+        _mcs.t();
+      }
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Account — Voyager Club | Meridian Cruises Fictional Test Site</title>
+  <link rel="stylesheet" href="_shared/styles.css">
+  <!-- Adobe Launch — _satellite not present in test env -->
+  <script src="_shared/launch-stub.js"></script>
+  <script src="_shared/am-config.js"></script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <div class="nav-logo-mark">H</div>
+        <span class="nav-logo-text">Meridian <span>America</span></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="destination.html">Destinations</a></li>
+        <li><a href="cruises.html">Cruises</a></li>
+        <li><a href="shore-excursions.html">Shore Excursions</a></li>
+        <li><a href="account.html" class="active">Account</a></li>
+        <li><a href="cruises.html" class="nav-cta">Find a Cruise</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Login Form (shown when logged out) -->
+    <div id="login-view">
+      <div class="page-header">
+        <div class="container">
+          <h1>Sign In to Your Account</h1>
+          <p>Access your bookings, shore excursions, and Voyager Club benefits</p>
+        </div>
+      </div>
+
+      <section class="section section-sand">
+        <div class="container" style="max-width:500px;">
+          <div class="booking-form-card">
+            <h2 style="font-family:'Playfair Display',serif;font-size:1.3rem;color:#002B5C;margin-bottom:24px;">Voyager Club Sign In</h2>
+
+            <div class="form-group">
+              <label class="form-label">Email Address or Voyager ID</label>
+              <input type="text" class="form-control" id="login-email" value="j.henderson@example.com" placeholder="Email or Voyager Club number">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Password</label>
+              <input type="password" class="form-control" id="login-password" value="Password123" placeholder="Enter your password">
+            </div>
+
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;">
+              <label style="display:flex;align-items:center;gap:8px;font-size:0.85rem;cursor:pointer;">
+                <input type="checkbox" checked style="accent-color:#002B5C;">
+                Remember me
+              </label>
+              <a href="#" class="text-sm" style="color:#B8962E;">Forgot password?</a>
+            </div>
+
+            <button class="btn btn-primary btn-full" id="login-btn" onclick="doLogin()">Sign In</button>
+
+            <div style="text-align:center;margin-top:20px;">
+              <p class="text-sm text-muted">Don't have an account? <a href="#" style="color:#B8962E;">Create one free</a></p>
+            </div>
+          </div>
+
+          <div class="booking-form-card" style="margin-top:16px;text-align:center;">
+            <div class="voyager-badge" style="display:inline-flex;margin:0 auto 8px;">⭐ Voyager Club</div>
+            <p class="text-sm text-muted">Earn cruise days with every voyage. Unlock Bronze, Silver, Gold, and Platinum benefits.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Dashboard (shown after login) -->
+    <div id="dashboard-view" style="display:none;">
+      <div class="page-header">
+        <div class="container">
+          <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;">
+            <div style="width:60px;height:60px;background:#B8962E;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:1.5rem;color:#002B5C;font-weight:700;flex-shrink:0;">J</div>
+            <div>
+              <div class="voyager-badge" style="margin-bottom:4px;">⭐ Voyager Gold</div>
+              <h1>Welcome back, James</h1>
+              <p>Voyager ID: VOYAGER-839201 · Gold Member since 2021</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="section section-sand">
+        <div class="container">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:32px;">
+
+            <!-- Upcoming Voyages -->
+            <div class="dashboard-card">
+              <h3>Upcoming Voyages</h3>
+              <div style="padding:16px;background:#F2EDE4;border-radius:6px;margin-bottom:12px;">
+                <div class="flex-between" style="margin-bottom:4px;">
+                  <p style="font-weight:600;font-size:0.9rem;color:#002B5C;">Alaska 7-Night Inside Passage</p>
+                  <span style="font-size:0.7rem;background:rgba(184,150,46,0.15);color:#B8962E;padding:2px 8px;border-radius:10px;font-weight:600;">CONFIRMED</span>
+                </div>
+                <p class="text-xs text-muted">Booking MC-2027-08921</p>
+                <!-- intentional: eVar30 only set on this page (login-wall variable) -->
+                <!-- Migration scanner will flag eVar30 as "seen in rule code only — requires authenticated session" -->
+                <p class="text-xs text-muted" id="departure-date-display" style="margin-top:4px;">Departure: May 14, 2027 · ms Meridian Aurora · Verandah</p>
+                <div style="display:flex;gap:8px;margin-top:12px;">
+                  <a href="booking-confirmation.html" class="btn btn-outline btn-sm">View Booking</a>
+                  <a href="shore-excursions.html" class="btn btn-outline btn-sm">Add Excursions</a>
+                </div>
+              </div>
+              <div style="padding:16px;background:#F2EDE4;border-radius:6px;">
+                <p style="font-weight:600;font-size:0.9rem;color:#002B5C;margin-bottom:4px;">Mediterranean 14-Night</p>
+                <p class="text-xs text-muted">Booking Meridian-2026-44217 · September 2026 · ms Meridian Solstice</p>
+                <p style="font-size:0.75rem;color:#B8962E;margin-top:4px;font-weight:500;">Completed ✓</p>
+              </div>
+            </div>
+
+            <!-- Voyager Benefits -->
+            <div class="dashboard-card">
+              <h3>Voyager Club — Gold Tier</h3>
+              <div style="background:linear-gradient(135deg,#B8962E 0%,#d4a832 100%);border-radius:8px;padding:20px;color:#002B5C;margin-bottom:16px;text-align:center;">
+                <p style="font-size:0.7rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:4px;">Voyager Cruise Days</p>
+                <p style="font-size:2.5rem;font-weight:700;line-height:1;">350</p>
+                <p style="font-size:0.75rem;margin-top:4px;">Gold: 200–499 days · Next tier: Platinum at 500</p>
+              </div>
+              <div style="display:flex;flex-direction:column;gap:8px;">
+                <div class="flex-between" style="font-size:0.85rem;">
+                  <span>Priority boarding</span>
+                  <span style="color:#B8962E;font-weight:600;">✓ Active</span>
+                </div>
+                <div class="flex-between" style="font-size:0.85rem;">
+                  <span>10% shore excursion discount</span>
+                  <span style="color:#B8962E;font-weight:600;">✓ Active</span>
+                </div>
+                <div class="flex-between" style="font-size:0.85rem;">
+                  <span>Complimentary dinner (1× per cruise)</span>
+                  <span style="color:#B8962E;font-weight:600;">✓ Active</span>
+                </div>
+                <div class="flex-between" style="font-size:0.85rem;color:#8a8070;">
+                  <span>Neptune Lounge access</span>
+                  <span>Platinum only</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Account Settings -->
+          <div class="dashboard-card">
+            <h3>Profile &amp; Preferences</h3>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">First Name</label>
+                <input type="text" class="form-control" value="James">
+              </div>
+              <div class="form-group">
+                <label class="form-label">Last Name</label>
+                <input type="text" class="form-control" value="Henderson">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">Email Address</label>
+                <input type="email" class="form-control" value="j.henderson@example.com">
+              </div>
+              <div class="form-group">
+                <label class="form-label">Phone</label>
+                <input type="tel" class="form-control" value="+1 206 555 0187">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Dietary Preference</label>
+              <select class="form-select">
+                <option selected>No special requirements</option>
+                <option>Vegetarian</option>
+                <option>Gluten-free</option>
+              </select>
+            </div>
+            <button class="btn btn-primary" onclick="alert('Profile saved (test site — no backend)')">Save Changes</button>
+            <button class="btn btn-outline" style="margin-left:12px;" onclick="doLogout()">Sign Out</button>
+          </div>
+
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="nav-logo">
+            <div class="nav-logo-mark">H</div>
+            <span class="nav-logo-text">Meridian <span>America</span></span>
+          </div>
+          <p>Delivering extraordinary cruise experiences since 1873.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="cruises.html">Find a Cruise</a></li>
+            <li><a href="destination.html">Destinations</a></li>
+            <li><a href="shore-excursions.html">Shore Excursions</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Plan</h4>
+          <ul>
+            <li><a href="book-step1.html">Start Booking</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About Meridian</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2027 Meridian Cruises (fictional test site)</span>
+        <span>Privacy Policy · Cookie Settings</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function doLogin() {
+      document.getElementById('login-view').style.display = 'none';
+      document.getElementById('dashboard-view').style.display = 'block';
+
+      // intentional: trackLogin fires only after authentication (login-wall)
+      // eVar15 = "Gold" (Voyager tier — low cardinality, eVar→prop candidate)
+      // visitorID set directly (legacy approach — migration note)
+      if (typeof trackLogin === 'function') {
+        trackLogin('VOYAGER-839201', 'Gold');
+      }
+
+      // intentional: eVar30 = departure date — ONLY visible post-login (login-wall variable)
+      // Migration scanner cannot see this during unauthenticated crawl.
+      // This is the key "unverified — seen in rule code only" test case.
+      if (typeof _mcs !== 'undefined') {
+        _mcs.eVar30 = "2027-05-14"; // intentional: departure date — login-wall, only fires after authentication
+        _mcs.t();
+      }
+    }
+
+    function doLogout() {
+      document.getElementById('login-view').style.display = 'block';
+      document.getElementById('dashboard-view').style.display = 'none';
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      // Page view fires for the login page (pre-authentication state)
+      // eVar30 is NOT set here — only set inside doLogin() after authentication
+      if (typeof _mcs !== 'undefined') {
+        _mcs.prop3 = "Account";
+        _mcs.t();
+      }
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Choose Cabin — Book Alaska Cruise | Meridian Cruises Fictional Test Site</title>
+  <link rel="stylesheet" href="_shared/styles.css">
+  <!-- Adobe Launch — _satellite not present in test env -->
+  <script src="_shared/launch-stub.js"></script>
+  <script src="_shared/am-config.js"></script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <div class="nav-logo-mark">H</div>
+        <span class="nav-logo-text">Meridian <span>America</span></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="destination.html">Destinations</a></li>
+        <li><a href="cruises.html">Cruises</a></li>
+        <li><a href="shore-excursions.html">Shore Excursions</a></li>
+        <li><a href="account.html">Account</a></li>
+        <li><a href="cruises.html" class="nav-cta">Find a Cruise</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Funnel Step Indicator -->
+  <div class="funnel-steps">
+    <div class="funnel-steps-inner">
+      <div class="funnel-step done">
+        <div class="funnel-step-bubble">✓</div>
+        <span class="funnel-step-label">Select Dates</span>
+      </div>
+      <div class="funnel-connector done"></div>
+      <div class="funnel-step active">
+        <div class="funnel-step-bubble">2</div>
+        <span class="funnel-step-label">Choose Cabin</span>
+      </div>
+      <div class="funnel-connector"></div>
+      <div class="funnel-step">
+        <div class="funnel-step-bubble">3</div>
+        <span class="funnel-step-label">Passenger Info</span>
+      </div>
+      <div class="funnel-connector"></div>
+      <div class="funnel-step">
+        <div class="funnel-step-bubble">4</div>
+        <span class="funnel-step-label">Review &amp; Pay</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a><span>›</span>
+        <a href="cruises.html">Cruises</a><span>›</span>
+        <a href="cruise-detail.html">Alaska 7-Night</a><span>›</span>
+        Choose Cabin
+      </div>
+      <h1>Step 2: Choose Your Cabin</h1>
+      <p>May 14, 2027 · ms Meridian Aurora · Voyage MC-AK001</p>
+    </div>
+  </div>
+
+  <main>
+    <section class="section section-sand">
+      <div class="container">
+        <div class="booking-layout">
+
+          <!-- Cabin Selection -->
+          <div class="booking-form-card">
+            <h2 style="font-family:'Playfair Display',serif;font-size:1.3rem;color:#002B5C;margin-bottom:8px;">Select Your Cabin Category</h2>
+            <p class="text-sm text-muted" style="margin-bottom:24px;">All prices per person, double occupancy. Includes port taxes and fees.</p>
+
+            <div style="display:flex;flex-direction:column;gap:16px;">
+
+              <!-- Interior -->
+              <div class="cabin-card" style="border:1.5px solid #c8bfad;border-radius:8px;padding:20px;background:#fff;">
+                <div class="flex-between" style="flex-wrap:wrap;gap:12px;">
+                  <div>
+                    <h4 style="color:#002B5C;margin-bottom:4px;">Interior Cabin</h4>
+                    <p class="text-xs text-muted">No window · Up to 183 sq ft · Sleeps 1–4</p>
+                    <p class="text-xs" style="color:#5a6278;margin-top:4px;">Cozy retreat with all the comforts of home. Perfect for explorers who plan to spend most time ashore.</p>
+                  </div>
+                  <div style="text-align:right;flex-shrink:0;">
+                    <!-- intentional: .cabin-price on each category row — DOM scraping will capture the first visible one -->
+                    <span class="cabin-price">$2,798</span>
+                    <p class="text-xs text-muted">per person</p>
+                    <button class="btn btn-outline btn-sm" style="margin-top:8px;" onclick="selectCabinType('Interior', 2798)">Select</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Ocean View -->
+              <div class="cabin-card" style="border:1.5px solid #c8bfad;border-radius:8px;padding:20px;background:#fff;">
+                <div class="flex-between" style="flex-wrap:wrap;gap:12px;">
+                  <div>
+                    <h4 style="color:#002B5C;margin-bottom:4px;">Ocean View Cabin</h4>
+                    <p class="text-xs text-muted">Porthole or window · Up to 197 sq ft · Sleeps 1–4</p>
+                    <p class="text-xs" style="color:#5a6278;margin-top:4px;">Wake up to ocean views. A picture window frames the passing scenery of the Inside Passage.</p>
+                  </div>
+                  <div style="text-align:right;flex-shrink:0;">
+                    <span class="cabin-price">$3,299</span>
+                    <p class="text-xs text-muted">per person</p>
+                    <button class="btn btn-outline btn-sm" style="margin-top:8px;" onclick="selectCabinType('Ocean View', 3299)">Select</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Verandah (pre-selected) -->
+              <div class="cabin-card" id="verandah-card" style="border:2px solid #002B5C;border-radius:8px;padding:20px;background:#f0f4fa;">
+                <div style="display:flex;justify-content:space-between;margin-bottom:8px;flex-wrap:wrap;gap:4px;">
+                  <span style="font-size:0.7rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#002B5C;background:rgba(0,43,92,0.1);padding:3px 8px;border-radius:2px;">Most Popular</span>
+                  <span style="font-size:0.7rem;color:#002B5C;font-weight:600;">✓ Selected</span>
+                </div>
+                <div class="flex-between" style="flex-wrap:wrap;gap:12px;">
+                  <div>
+                    <h4 style="color:#002B5C;margin-bottom:4px;">Verandah Cabin</h4>
+                    <p class="text-xs text-muted">Private balcony · Up to 254 sq ft · Sleeps 1–3</p>
+                    <p class="text-xs" style="color:#5a6278;margin-top:4px;">Your own private balcony for glacier and wildlife viewing. Unbeatable for Alaska.</p>
+                  </div>
+                  <div style="text-align:right;flex-shrink:0;">
+                    <span class="cabin-price">$3,998</span>
+                    <p class="text-xs text-muted">per person</p>
+                    <button class="btn btn-primary btn-sm" style="margin-top:8px;" onclick="selectCabinType('Verandah', 3998)">Selected ✓</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Neptune Suite -->
+              <div class="cabin-card" style="border:1.5px solid #c8bfad;border-radius:8px;padding:20px;background:#fff;">
+                <div class="flex-between" style="flex-wrap:wrap;gap:12px;">
+                  <div>
+                    <h4 style="color:#002B5C;margin-bottom:4px;">Neptune Suite</h4>
+                    <p class="text-xs text-muted">Large verandah · Up to 506 sq ft · Sleeps 1–3</p>
+                    <p class="text-xs" style="color:#5a6278;margin-top:4px;">Exclusive Neptune Lounge access, priority embarkation, and upgraded amenities.</p>
+                  </div>
+                  <div style="text-align:right;flex-shrink:0;">
+                    <span class="cabin-price">$5,499</span>
+                    <p class="text-xs text-muted">per person</p>
+                    <button class="btn btn-outline btn-sm" style="margin-top:8px;" onclick="selectCabinType('Neptune Suite', 5499)">Select</button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-top:32px;">
+              <a href="book-step1.html" class="btn btn-outline">← Back</a>
+              <a href="book-step3.html" class="btn btn-primary" id="continue-btn">Continue to Passenger Info →</a>
+            </div>
+          </div>
+
+          <!-- Summary Sidebar -->
+          <div>
+            <div class="booking-summary-card">
+              <p class="booking-summary-title">Your Booking</p>
+              <div class="booking-summary-row"><span>Voyage</span><span>MC-AK001</span></div>
+              <div class="booking-summary-row"><span>Departure</span><span>May 14, 2027</span></div>
+              <div class="booking-summary-row"><span>Duration</span><span>7 Nights</span></div>
+              <div class="booking-summary-row"><span>Guests</span><span>2</span></div>
+              <div class="booking-summary-row"><span>Cabin</span><span id="selected-cabin">Verandah</span></div>
+              <div class="booking-summary-row total">
+                <span>Subtotal</span>
+                <span id="sidebar-total">$7,996</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <span>© 2027 Meridian Cruises (fictional test site)</span>
+        <span>Privacy Policy · Cookie Settings</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function selectCabinType(category, pricePerPerson) {
+      document.getElementById('selected-cabin').textContent = category;
+      document.getElementById('sidebar-total').textContent = '$' + (pricePerPerson * 2).toLocaleString();
+      console.log('[Meridian] Cabin selected:', category, pricePerPerson);
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      // intentional: trackBookingStep fires for step 2 — eVar22 = "2"
+      if (typeof trackBookingStep === 'function') {
+        trackBookingStep(2, 'Choose Cabin');
+      }
+    });
+  </script>
+
+</body>
+</html>

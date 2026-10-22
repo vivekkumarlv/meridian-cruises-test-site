@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alaska 7-Night Inside Passage — Meridian Cruises | Fictional Test Site</title>
+  <link rel="stylesheet" href="_shared/styles.css">
+  <!-- Adobe Launch — _satellite not present in test env -->
+  <script src="_shared/launch-stub.js"></script>
+  <script src="_shared/am-config.js"></script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <div class="nav-logo-mark">H</div>
+        <span class="nav-logo-text">Meridian <span>America</span></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="destination.html">Destinations</a></li>
+        <li><a href="cruises.html" class="active">Cruises</a></li>
+        <li><a href="shore-excursions.html">Shore Excursions</a></li>
+        <li><a href="account.html">Account</a></li>
+        <li><a href="cruises.html" class="nav-cta">Find a Cruise</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a><span>›</span>
+        <a href="cruises.html">Cruises</a><span>›</span>
+        Alaska 7-Night Inside Passage
+      </div>
+      <h1>Alaska 7-Night Inside Passage</h1>
+      <p>Voyage MC-AK001 · ms Meridian Aurora · Round-trip from Seattle</p>
+      <div>
+        <span class="info-badge">🗓 7 Nights</span>
+        <span class="info-badge">🚢 ms Meridian Aurora</span>
+        <span class="info-badge">📍 5 Ports of Call</span>
+        <span class="info-badge">⭐ Glacier Bay National Park</span>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <section class="section section-sand">
+      <div class="container">
+        <div class="booking-layout">
+
+          <!-- Voyage Details -->
+          <div>
+            <!-- Hero Image Placeholder -->
+            <div style="width:100%;height:300px;background:linear-gradient(135deg,#002B5C 0%,#003d82 100%);border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:32px;color:#B8962E;font-family:'Playfair Display',serif;font-size:1.5rem;font-style:italic;">
+              Alaska Inside Passage
+            </div>
+
+            <!-- Price + Book CTA -->
+            <div class="booking-form-card" style="margin-bottom:24px;">
+              <div class="flex-between" style="flex-wrap:wrap;gap:16px;">
+                <div>
+                  <p class="text-xs text-muted" style="margin-bottom:4px;">Interior cabins from</p>
+                  <!-- intentional: .cabin-price class on this element — triggers DOM scraping detection in scanner -->
+                  <span class="cabin-price" id="voyage-price">$2,798</span>
+                  <span class="text-sm text-muted"> per person</span>
+                  <p class="text-xs text-muted" style="margin-top:4px;">Based on double occupancy · Taxes &amp; fees included</p>
+                </div>
+                <a href="book-step1.html" class="btn btn-primary" onclick="window.trackCTA && trackCTA('Book Now — Alaska Inside Passage', 'book-step1.html')">Book This Voyage</a>
+              </div>
+            </div>
+
+            <!-- Cabin Tabs -->
+            <div class="booking-form-card" style="margin-bottom:24px;">
+              <h3 style="font-size:1.1rem;color:#002B5C;margin-bottom:16px;">Choose Your Cabin Category</h3>
+              <div class="cabin-tabs">
+                <button class="cabin-tab active" onclick="selectCabin(this,'Interior','2798')">Interior</button>
+                <button class="cabin-tab" onclick="selectCabin(this,'Ocean View','3299')">Ocean View</button>
+                <button class="cabin-tab" onclick="selectCabin(this,'Verandah','3998')">Verandah</button>
+                <button class="cabin-tab" onclick="selectCabin(this,'Neptune Suite','5499')">Neptune Suite</button>
+                <button class="cabin-tab" onclick="selectCabin(this,'Pinnacle Suite','7999')">Pinnacle Suite</button>
+              </div>
+              <div class="highlight-box">
+                <p><strong>Verandah Cabin</strong> — Spacious stateroom with a private balcony. Perfect for viewing glaciers and wildlife from the comfort of your cabin. Starting from <span class="text-gold">$3,998 per person</span>.</p>
+              </div>
+              <p class="text-xs text-muted">Prices shown are per person based on double occupancy. Single supplements apply.</p>
+            </div>
+
+            <!-- Itinerary -->
+            <div class="booking-form-card">
+              <h3 style="font-size:1.1rem;color:#002B5C;margin-bottom:20px;">7-Night Itinerary</h3>
+              <ul class="itinerary-list">
+                <li class="itinerary-item">
+                  <div class="itinerary-day">D1</div>
+                  <div>
+                    <p class="itinerary-port">Seattle, Washington</p>
+                    <p class="itinerary-desc">Embark ms Meridian Aurora. Sail through Puget Sound as the Seattle skyline fades behind you.</p>
+                  </div>
+                </li>
+                <li class="itinerary-item">
+                  <div class="itinerary-day">D2</div>
+                  <div>
+                    <p class="itinerary-port">Day at Sea</p>
+                    <p class="itinerary-desc">Enjoy onboard amenities, cooking demonstrations, and lectures by Glacier Bay rangers.</p>
+                  </div>
+                </li>
+                <li class="itinerary-item">
+                  <div class="itinerary-day">D3</div>
+                  <div>
+                    <p class="itinerary-port">Juneau, Alaska</p>
+                    <p class="itinerary-desc">Alaska's capital and one of its most scenic cities. Visit Mendenhall Glacier or ride the Mount Roberts Tramway.</p>
+                  </div>
+                </li>
+                <li class="itinerary-item">
+                  <div class="itinerary-day">D4</div>
+                  <div>
+                    <p class="itinerary-port">Skagway, Alaska</p>
+                    <p class="itinerary-desc">Gateway to the Klondike Gold Rush. Ride the White Pass & Yukon Route railway into Canada.</p>
+                  </div>
+                </li>
+                <li class="itinerary-item">
+                  <div class="itinerary-day">D5</div>
+                  <div>
+                    <p class="itinerary-port">Glacier Bay National Park</p>
+                    <p class="itinerary-desc">UNESCO World Heritage Site. Witness towering tidewater glaciers calving into the sea.</p>
+                  </div>
+                </li>
+                <li class="itinerary-item">
+                  <div class="itinerary-day">D6</div>
+                  <div>
+                    <p class="itinerary-port"><a href="destination.html" style="color:#002B5C;">Ketchikan, Alaska</a></p>
+                    <p class="itinerary-desc">The "Salmon Capital of the World." Explore Creek Street, totems, and rainforest excursions.</p>
+                  </div>
+                </li>
+                <li class="itinerary-item">
+                  <div class="itinerary-day">D7</div>
+                  <div>
+                    <p class="itinerary-port">Day at Sea</p>
+                    <p class="itinerary-desc">Relax and reminisce on your journey through the Inside Passage.</p>
+                  </div>
+                </li>
+                <li class="itinerary-item">
+                  <div class="itinerary-day">D8</div>
+                  <div>
+                    <p class="itinerary-port">Seattle, Washington</p>
+                    <p class="itinerary-desc">Disembark in Seattle. Your Alaskan adventure concludes.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Booking Summary Sidebar -->
+          <div>
+            <div class="booking-summary-card">
+              <p class="booking-summary-title">Voyage Summary</p>
+              <div class="booking-summary-row"><span>Voyage</span><span>MC-AK001</span></div>
+              <div class="booking-summary-row"><span>Duration</span><span>7 Nights</span></div>
+              <div class="booking-summary-row"><span>Ship</span><span>ms Meridian Aurora</span></div>
+              <div class="booking-summary-row"><span>Departure</span><span>May 14, 2027</span></div>
+              <div class="booking-summary-row"><span>Return</span><span>May 21, 2027</span></div>
+              <div class="booking-summary-row"><span>Embarkation</span><span>Seattle, WA</span></div>
+              <div class="booking-summary-row total">
+                <span>From</span>
+                <span id="sidebar-price">$2,798 / person</span>
+              </div>
+              <a href="book-step1.html" class="btn btn-primary btn-full mt-4" style="margin-top:20px;" onclick="window.trackCTA && trackCTA('Book Now Sidebar', 'book-step1.html')">Book This Voyage</a>
+            </div>
+
+            <div class="booking-form-card" style="margin-top:16px;">
+              <h4 style="font-size:0.9rem;color:#002B5C;margin-bottom:12px;">Shore Excursions Available</h4>
+              <p class="text-xs text-muted" style="margin-bottom:12px;">Over 40 shore excursions in 4 Alaskan ports. Book now to secure your spot.</p>
+              <a href="shore-excursions.html" class="btn btn-outline btn-sm btn-full">Browse Excursions</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="nav-logo">
+            <div class="nav-logo-mark">H</div>
+            <span class="nav-logo-text">Meridian <span>America</span></span>
+          </div>
+          <p>Delivering extraordinary cruise experiences since 1873.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="cruises.html">Find a Cruise</a></li>
+            <li><a href="destination.html">Destinations</a></li>
+            <li><a href="shore-excursions.html">Shore Excursions</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Plan</h4>
+          <ul>
+            <li><a href="book-step1.html">Start Booking</a></li>
+            <li><a href="account.html">Voyager Club</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About Meridian</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2027 Meridian Cruises (fictional test site)</span>
+        <span>Privacy Policy · Cookie Settings</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function selectCabin(el, category, price) {
+      document.querySelectorAll('.cabin-tab').forEach(function(t) { t.classList.remove('active'); });
+      el.classList.add('active');
+      // Update displayed price (intentional: DOM manipulation — cabin-price element updated)
+      var priceEl = document.getElementById('voyage-price');
+      if (priceEl) priceEl.textContent = '$' + parseInt(price).toLocaleString();
+      var sidebarEl = document.getElementById('sidebar-price');
+      if (sidebarEl) sidebarEl.textContent = '$' + parseInt(price).toLocaleString() + ' / person';
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      // intentional: trackVoyageDetail fires on page load
+      // eVar5 gets merchandising binding, eVar9 also set by DOM scraping in am-config.js
+      if (typeof trackVoyageDetail === 'function') {
+        trackVoyageDetail('MC-AK001', 'Alaska 7-Night Inside Passage', 'Alaska');
+      }
+    });
+  </script>
+
+</body>
+</html>

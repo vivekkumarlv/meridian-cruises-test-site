@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find a Cruise — Meridian Cruises | Fictional Test Site</title>
+  <link rel="stylesheet" href="_shared/styles.css">
+  <!-- Adobe Launch — _satellite not present in test env -->
+  <script src="_shared/launch-stub.js"></script>
+  <script src="_shared/am-config.js"></script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <div class="nav-logo-mark">H</div>
+        <span class="nav-logo-text">Meridian <span>America</span></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="destination.html">Destinations</a></li>
+        <li><a href="cruises.html" class="active">Cruises</a></li>
+        <li><a href="shore-excursions.html">Shore Excursions</a></li>
+        <li><a href="account.html">Account</a></li>
+        <li><a href="cruises.html" class="nav-cta">Find a Cruise</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a><span>›</span>Cruises
+      </div>
+      <h1>Find Your Perfect Cruise</h1>
+      <p>6 voyages found · Showing results for "Alaska 7 night"</p>
+    </div>
+  </div>
+
+  <main>
+    <section class="section section-sand">
+      <div class="container">
+        <div class="search-layout">
+
+          <!-- Filters Sidebar -->
+          <aside class="filter-card">
+            <p class="filter-title">Filter Results</p>
+
+            <div class="filter-group">
+              <label>Destination</label>
+              <label class="filter-option"><input type="checkbox" checked> Alaska</label>
+              <label class="filter-option"><input type="checkbox"> Caribbean</label>
+              <label class="filter-option"><input type="checkbox"> Europe</label>
+              <label class="filter-option"><input type="checkbox"> Pacific Northwest</label>
+              <label class="filter-option"><input type="checkbox"> Hawaii</label>
+            </div>
+
+            <div class="filter-group">
+              <label>Duration</label>
+              <label class="filter-option"><input type="checkbox"> 3–5 Nights</label>
+              <label class="filter-option"><input type="checkbox" checked> 7 Nights</label>
+              <label class="filter-option"><input type="checkbox"> 10–14 Nights</label>
+              <label class="filter-option"><input type="checkbox"> 14+ Nights</label>
+            </div>
+
+            <div class="filter-group">
+              <label>Price Range</label>
+              <select class="form-select" id="filter-price">
+                <option>Any price</option>
+                <option>Under $2,000</option>
+                <option selected>$2,000 – $3,500</option>
+                <option>$3,500 – $5,000</option>
+                <option>$5,000+</option>
+              </select>
+            </div>
+
+            <div class="filter-group">
+              <label>Ship</label>
+              <label class="filter-option"><input type="checkbox"> ms Meridian Aurora</label>
+              <label class="filter-option"><input type="checkbox"> ms Meridian Tide</label>
+              <label class="filter-option"><input type="checkbox"> ms Meridian Horizon</label>
+              <label class="filter-option"><input type="checkbox"> ms Meridian Solstice</label>
+            </div>
+
+            <button class="btn btn-primary btn-full">Apply Filters</button>
+          </aside>
+
+          <!-- Results Grid -->
+          <div>
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:24px;">
+              <p class="text-muted text-sm"><strong style="color:#1A1A2E;">6 voyages</strong> match your search</p>
+              <select class="form-select" style="width:auto;">
+                <option>Sort: Best Match</option>
+                <option>Price: Low to High</option>
+                <option>Price: High to Low</option>
+                <option>Duration: Short to Long</option>
+                <option>Departure Date</option>
+              </select>
+            </div>
+
+            <div class="cards-grid" style="grid-template-columns:repeat(auto-fill,minmax(280px,1fr));">
+
+              <!-- Voyage 1 -->
+              <div class="cruise-card">
+                <div class="cruise-card-img-placeholder">Alaska</div>
+                <div class="cruise-card-body">
+                  <span class="cruise-card-tag">Alaska</span>
+                  <h3 class="cruise-card-title">Alaska 7-Night Inside Passage</h3>
+                  <p class="cruise-card-meta">7 nights · ms Meridian Aurora · Departs May 14, 2027</p>
+                  <div class="cruise-card-price">
+                    <span class="price-from">From</span>
+                    <span class="cabin-price">$2,798</span>
+                    <span class="price-from">pp</span>
+                  </div>
+                  <a href="cruise-detail.html" class="btn btn-outline btn-sm">View Details</a>
+                </div>
+              </div>
+
+              <!-- Voyage 2 -->
+              <div class="cruise-card">
+                <div class="cruise-card-img-placeholder">Alaska</div>
+                <div class="cruise-card-body">
+                  <span class="cruise-card-tag">Alaska</span>
+                  <h3 class="cruise-card-title">Alaska 7-Night Gulf & Glacier</h3>
+                  <p class="cruise-card-meta">7 nights · ms Meridian Horizon · Departs Jun 7, 2027</p>
+                  <div class="cruise-card-price">
+                    <span class="price-from">From</span>
+                    <span class="cabin-price">$2,499</span>
+                    <span class="price-from">pp</span>
+                  </div>
+                  <a href="cruise-detail.html" class="btn btn-outline btn-sm">View Details</a>
+                </div>
+              </div>
+
+              <!-- Voyage 3 -->
+              <div class="cruise-card">
+                <div class="cruise-card-img-placeholder">Alaska</div>
+                <div class="cruise-card-body">
+                  <span class="cruise-card-tag">Alaska</span>
+                  <h3 class="cruise-card-title">Alaska 7-Night Denali & Beyond</h3>
+                  <p class="cruise-card-meta">7 nights · ms Meridian Tide · Departs Jul 5, 2027</p>
+                  <div class="cruise-card-price">
+                    <span class="price-from">From</span>
+                    <span class="cabin-price">$3,199</span>
+                    <span class="price-from">pp</span>
+                  </div>
+                  <a href="cruise-detail.html" class="btn btn-outline btn-sm">View Details</a>
+                </div>
+              </div>
+
+              <!-- Voyage 4 -->
+              <div class="cruise-card">
+                <div class="cruise-card-img-placeholder">Alaska</div>
+                <div class="cruise-card-body">
+                  <span class="cruise-card-tag">Alaska</span>
+                  <h3 class="cruise-card-title">Alaska 7-Night Glacier Discovery</h3>
+                  <p class="cruise-card-meta">7 nights · ms Meridian Solstice · Departs Aug 2, 2027</p>
+                  <div class="cruise-card-price">
+                    <span class="price-from">From</span>
+                    <span class="cabin-price">$2,999</span>
+                    <span class="price-from">pp</span>
+                  </div>
+                  <a href="cruise-detail.html" class="btn btn-outline btn-sm">View Details</a>
+                </div>
+              </div>
+
+              <!-- Voyage 5 -->
+              <div class="cruise-card">
+                <div class="cruise-card-img-placeholder">Alaska</div>
+                <div class="cruise-card-body">
+                  <span class="cruise-card-tag">Alaska</span>
+                  <h3 class="cruise-card-title">Alaska 7-Night Northbound</h3>
+                  <p class="cruise-card-meta">7 nights · ms Meridian Aurora · Departs Sep 6, 2027</p>
+                  <div class="cruise-card-price">
+                    <span class="price-from">From</span>
+                    <span class="cabin-price">$2,649</span>
+                    <span class="price-from">pp</span>
+                  </div>
+                  <a href="cruise-detail.html" class="btn btn-outline btn-sm">View Details</a>
+                </div>
+              </div>
+
+              <!-- Voyage 6 -->
+              <div class="cruise-card">
+                <div class="cruise-card-img-placeholder">Alaska</div>
+                <div class="cruise-card-body">
+                  <span class="cruise-card-tag">Alaska</span>
+                  <h3 class="cruise-card-title">Alaska 7-Night Southbound</h3>
+                  <p class="cruise-card-meta">7 nights · ms Meridian Horizon · Departs Sep 27, 2027</p>
+                  <div class="cruise-card-price">
+                    <span class="price-from">From</span>
+                    <span class="cabin-price">$2,549</span>
+                    <span class="price-from">pp</span>
+                  </div>
+                  <a href="cruise-detail.html" class="btn btn-outline btn-sm">View Details</a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="nav-logo">
+            <div class="nav-logo-mark">H</div>
+            <span class="nav-logo-text">Meridian <span>America</span></span>
+          </div>
+          <p>Delivering extraordinary cruise experiences since 1873.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="cruises.html">Find a Cruise</a></li>
+            <li><a href="destination.html">Destinations</a></li>
+            <li><a href="shore-excursions.html">Shore Excursions</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Plan</h4>
+          <ul>
+            <li><a href="book-step1.html">Start Booking</a></li>
+            <li><a href="account.html">Voyager Club</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About Meridian</a></li>
+            <li><a href="#">Sustainability</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2027 Meridian Cruises (fictional test site)</span>
+        <span>Privacy Policy · Cookie Settings</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // intentional: trackSearch fires on page load with query, count, and filter state
+      // prop20 = eVar45 (duplicate_tracking) — tested here
+      if (typeof trackSearch === 'function') {
+        var filters = {
+          destination: 'Alaska',
+          duration: '7',
+          priceRange: '2000-3500'
+        };
+        trackSearch('Alaska 7 night', 6, filters);
+      }
+    });
+  </script>
+
+</body>
+</html>

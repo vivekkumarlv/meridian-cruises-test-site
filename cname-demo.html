@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meridian CNAME Demo — Custom Edge Domain | Fictional Test Site</title>
+  <link rel="stylesheet" href="_shared/styles.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <div class="nav-logo-mark">H</div>
+        <span class="nav-logo-text">Meridian <span>America</span></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="destination.html">Destinations</a></li>
+        <li><a href="cruises.html">Cruises</a></li>
+        <li><a href="shore-excursions.html">Shore Excursions</a></li>
+        <li><a href="account.html">Account</a></li>
+        <li><a href="cruises.html" class="nav-cta">Find a Cruise</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <section class="section section-light">
+      <div class="container">
+        <h1>Meridian Cruises — CNAME / First-Party Domain Demo</h1>
+        <p>Module 9 — This page simulates a property using a custom edge domain for cookie persistence.</p>
+
+        <div style="padding:16px;background:#f5f5f5;border-left:4px solid #002B5C;font-size:0.85em;font-family:monospace;margin:24px 0;">
+          <strong>Module 9 Detection signal present on this page:</strong><br>
+          • <code>alloy("configure", { edgeDomain: "data.meridian-cruises.com" })</code><br>
+          &nbsp;&nbsp;Scanner reads this and sets <code>inventory.cnameEdgeDomain = "data.meridian-cruises.com"</code><br>
+          &nbsp;&nbsp;Parity scanner must intercept <code>data.meridian-cruises.com</code> instead of <code>edge.adobedc.net</code>
+        </div>
+
+        <p style="margin-top:24px;"><a href="index.html">&larr; Back to Home</a></p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <span>© 2027 Meridian Cruises (fictional test site)</span>
+        <span>Module 9 — CNAME / Custom Edge Domain Demo</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // MODULE 9: CNAME detection — alloy configure with custom edgeDomain
+    // Scanner reads this and sets inventory.cnameEdgeDomain = "data.meridian-cruises.com"
+    // Parity scanner must intercept data.meridian-cruises.com instead of edge.adobedc.net
+    var alloy = alloy || function() { return Promise.resolve({}); };
+    alloy("configure", {
+      datastreamId: "meridian-dev-datastream-id",
+      orgId: "MERIDIAN_ORG_ID@AdobeOrg",
+      edgeDomain: "data.meridian-cruises.com",   // ← CNAME — THIS IS WHAT SCANNER DETECTS
+      edgeBasePath: "ee",
+    });
+  </script>
+
+  <script src="_shared/am-config.js"></script>
+
+</body>
+</html>

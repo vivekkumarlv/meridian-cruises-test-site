@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shore Excursions — Alaska Inside Passage | Meridian Cruises Fictional Test Site</title>
+  <link rel="stylesheet" href="_shared/styles.css">
+  <!-- Adobe Launch — _satellite not present in test env -->
+  <script src="_shared/launch-stub.js"></script>
+  <script src="_shared/am-config.js"></script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <div class="nav-logo-mark">H</div>
+        <span class="nav-logo-text">Meridian <span>America</span></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="destination.html">Destinations</a></li>
+        <li><a href="cruises.html">Cruises</a></li>
+        <li><a href="shore-excursions.html" class="active">Shore Excursions</a></li>
+        <li><a href="account.html">Account</a></li>
+        <li><a href="cruises.html" class="nav-cta">Find a Cruise</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a><span>›</span>Shore Excursions
+      </div>
+      <h1>Shore Excursions</h1>
+      <p>Alaska Inside Passage · Voyage MC-AK001 · 4 ports · 40+ excursions</p>
+    </div>
+  </div>
+
+  <main>
+    <section class="section section-sand">
+      <div class="container">
+
+        <!-- Port Filter Tabs -->
+        <div style="display:flex;gap:8px;margin-bottom:32px;flex-wrap:wrap;">
+          <button class="cabin-tab active" onclick="filterPort(this,'all')">All Ports</button>
+          <button class="cabin-tab" onclick="filterPort(this,'juneau')">Juneau</button>
+          <button class="cabin-tab" onclick="filterPort(this,'skagway')">Skagway</button>
+          <button class="cabin-tab" onclick="filterPort(this,'glacier')">Glacier Bay</button>
+          <button class="cabin-tab" onclick="filterPort(this,'ketchikan')">Ketchikan</button>
+        </div>
+
+        <!-- Excursion Cards -->
+        <div id="excursion-list">
+
+          <!-- Excursion 1 — Juneau -->
+          <div class="excursion-card" data-port="juneau" data-id="EXC-JUN-001" data-name="Mendenhall Glacier Hike &amp; Ice Walk" data-price="189">
+            <div class="excursion-img-placeholder">🏔️</div>
+            <div class="excursion-body">
+              <p class="excursion-title">Mendenhall Glacier Hike &amp; Ice Walk</p>
+              <p class="excursion-meta">Juneau · 4 hours · Moderate difficulty · Max 12 guests</p>
+              <p class="text-xs text-muted" style="margin-bottom:10px;">Hike to the face of Mendenhall Glacier then lace up your crampons for a guided walk on the ancient blue ice. One of Alaska's most dramatic experiences.</p>
+              <p class="excursion-price">$189 per person</p>
+              <button class="btn btn-primary btn-sm" onclick="addExcursion('EXC-JUN-001', 'Mendenhall Glacier Hike & Ice Walk', 189)">
+                Add to Booking
+              </button>
+            </div>
+          </div>
+
+          <!-- Excursion 2 — Juneau -->
+          <div class="excursion-card" data-port="juneau" data-id="EXC-JUN-002" data-name="Whale Watching &amp; Wildlife Quest" data-price="149">
+            <div class="excursion-img-placeholder">🐋</div>
+            <div class="excursion-body">
+              <p class="excursion-title">Whale Watching &amp; Wildlife Quest</p>
+              <p class="excursion-meta">Juneau · 3 hours · Easy · Max 30 guests</p>
+              <p class="text-xs text-muted" style="margin-bottom:10px;">Cruise Stephens Passage aboard a naturalist-led vessel in search of humpback whales, orcas, Steller sea lions, and bald eagles. Sightings guaranteed or rebook free.</p>
+              <p class="excursion-price">$149 per person</p>
+              <button class="btn btn-primary btn-sm" onclick="addExcursion('EXC-JUN-002', 'Whale Watching & Wildlife Quest', 149)">
+                Add to Booking
+              </button>
+            </div>
+          </div>
+
+          <!-- Excursion 3 — Skagway -->
+          <div class="excursion-card" data-port="skagway" data-id="EXC-SKA-001" data-name="White Pass &amp; Yukon Route Railway" data-price="229">
+            <div class="excursion-img-placeholder">🚂</div>
+            <div class="excursion-body">
+              <p class="excursion-title">White Pass &amp; Yukon Route Railway — Summit Excursion</p>
+              <p class="excursion-meta">Skagway · 3.5 hours · Easy · All ages</p>
+              <p class="text-xs text-muted" style="margin-bottom:10px;">Board the historic narrow-gauge railway and climb 2,885 feet through dramatic mountain scenery to the White Pass Summit on the US-Canada border. An engineering marvel from 1898.</p>
+              <p class="excursion-price">$229 per person</p>
+              <button class="btn btn-primary btn-sm" onclick="addExcursion('EXC-SKA-001', 'White Pass & Yukon Route Railway', 229)">
+                Add to Booking
+              </button>
+            </div>
+          </div>
+
+          <!-- Excursion 4 — Ketchikan -->
+          <div class="excursion-card" data-port="ketchikan" data-id="EXC-KET-001" data-name="Misty Fjords Floatplane Flightseeing" data-price="329">
+            <div class="excursion-img-placeholder">✈️</div>
+            <div class="excursion-body">
+              <p class="excursion-title">Misty Fjords Flightseeing by Floatplane</p>
+              <p class="excursion-meta">Ketchikan · 1.5 hours · Easy · Max 9 guests</p>
+              <p class="text-xs text-muted" style="margin-bottom:10px;">Soar above Misty Fjords National Monument in a DeHavilland Beaver floatplane. Glacier-carved granite walls, emerald fjords, and a water landing in a pristine alpine lake.</p>
+              <p class="excursion-price">$329 per person</p>
+              <button class="btn btn-primary btn-sm" onclick="addExcursion('EXC-KET-001', 'Misty Fjords Floatplane Flightseeing', 329)">
+                Add to Booking
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Cart Toast (hidden by default) -->
+        <div id="cart-toast" style="display:none;position:fixed;bottom:24px;right:24px;background:#002B5C;color:#FFFFFF;padding:16px 24px;border-radius:8px;box-shadow:0 8px 24px rgba(0,0,0,0.25);z-index:999;max-width:320px;">
+          <p style="font-weight:600;margin-bottom:4px;" id="toast-excursion-name">Excursion Added</p>
+          <p class="text-xs" style="color:rgba(255,255,255,0.7);" id="toast-price">$0 added to booking</p>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="nav-logo">
+            <div class="nav-logo-mark">H</div>
+            <span class="nav-logo-text">Meridian <span>America</span></span>
+          </div>
+          <p>Delivering extraordinary cruise experiences since 1873.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="cruises.html">Find a Cruise</a></li>
+            <li><a href="destination.html">Destinations</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Plan</h4>
+          <ul>
+            <li><a href="book-step1.html">Start Booking</a></li>
+            <li><a href="account.html">Voyager Club</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About Meridian</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2027 Meridian Cruises (fictional test site)</span>
+        <span>Privacy Policy · Cookie Settings</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Filter excursions by port
+    function filterPort(el, port) {
+      document.querySelectorAll('.cabin-tab').forEach(function(t) { t.classList.remove('active'); });
+      el.classList.add('active');
+      var cards = document.querySelectorAll('.excursion-card');
+      cards.forEach(function(card) {
+        if (port === 'all' || card.dataset.port === port) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // Add excursion to booking cart
+    function addExcursion(excursionId, excursionName, price) {
+      // intentional: trackExcursionAdd fires s.t() with scAdd event and products string
+      if (typeof trackExcursionAdd === 'function') {
+        trackExcursionAdd(excursionId, excursionName, price);
+      }
+
+      // Show confirmation toast
+      var toast = document.getElementById('cart-toast');
+      document.getElementById('toast-excursion-name').textContent = excursionName + ' added';
+      document.getElementById('toast-price').textContent = '$' + price.toLocaleString() + ' per person added to booking';
+      toast.style.display = 'block';
+      setTimeout(function() { toast.style.display = 'none'; }, 3500);
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      // intentional: page view fires with prop3 = "Shore Excursions"
+      if (typeof _mcs !== 'undefined') {
+        _mcs.prop3 = "Shore Excursions";
+        _mcs.t();
+      }
+    });
+  </script>
+
+</body>
+</html>
